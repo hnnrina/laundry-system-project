@@ -107,6 +107,11 @@ All responses from the server are parsed and displayed to the user via table mod
 * Technology: Java (Swing UI), JSON + Google Maps API
 * API Integration: Similar to student app + includes Google Maps integration for address visualization.
 
+
+# Flowchart
+### Flowchart for Staff Sign Up
+
+
 ## Use Case Diagram
 ### Use Case: Staff Sign-Up
 
