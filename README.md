@@ -86,14 +86,14 @@ The system includes two distinct frontend applications: one for customers and an
 
 ### Customer App 
 #### Purpose:
-This desktop application is designed for students to easily manage their laundry service needs. It allows users to sign up or log in, book laundry pickups, select services (e.g., wash & fold, dry clean), specify time slots, and monitor the status of their orders in real time. The intuitive UI helps students interact with the system without needing technical knowledge.
+This application is designed for customers to easily manage their laundry service needs. It allows users to sign up or log in, book laundry pickups, select services (e.g., wash, dry & fold; wash, dry & iron), specify time slots, and monitor the status of their orders in real time. The intuitive UI helps customers interact with the system without needing technical knowledge.
 #### Technology Stack:
 * Java Swing for the GUI interface
 * Java AWT for event handling and layout management
 * org.json for parsing JSON responses from the backend
 * HTTPURLConnection for sending and receiving API requests
 #### API Integration: 
-The student app interacts with backend endpoints using POST and GET HTTP methods. Key operations include:
+The customer app interacts with backend endpoints using POST and GET HTTP methods. Key operations include:
 * User Authentication: /signup.php, /login.php
 * Booking Orders: /create_order.php
 * Fetching Available Services: /getservice.php
