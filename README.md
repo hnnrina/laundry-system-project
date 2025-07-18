@@ -46,21 +46,22 @@ This system is composed of two separate frontend applications (for students and 
 graph TD
 
 %% Frontend Applications
-A1[Student Frontend App<br>(Java Swing)] 
-A2[Staff Frontend App<br>(Java Swing)]
+A1[Student Frontend App (Java Swing)] 
+A2[Staff Frontend App (Java Swing)]
 
 %% Backend
-B[Backend Server<br>(PHP + REST API)]
+B[Backend Server (PHP + REST API)]
 
 %% Database
 C[(MySQL Database)]
 
 %% External API
-D[Google Maps API<br>(3rd-Party)]
+D[Google Maps API]
 
 %% Data Flow
-A1 -->|HTTP Requests| B
-A2 -->|HTTP Requests| B
-B -->|Read/Write Data| C
+A1 -->|HTTP Request| B
+A2 -->|HTTP Request| B
+B -->|Read/Write| C
 B -->|Address Lookup| D
 ```
+
