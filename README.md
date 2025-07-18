@@ -108,3 +108,18 @@ All responses from the server are parsed and displayed to the user via table mod
 * API Integration: Similar to student app + includes Google Maps integration for address visualization.
 
 ## Use Case Diagram
+## Use Case Diagram
+### Use Case: Staff Sign-Up
+
+| **Field**             | **Description** |
+|-----------------------|-----------------|
+| **Test Case ID**      | TC-001 |
+| **Use Case Name**     | Staff Sign-Up |
+| **Use Case Description** | The system will allows the staff to register their credentials into the laundry management system. |
+| **Actor**             | Staff Member |
+| **Pre Conditions**    | - Ensure that the application is running<br>- Ensure that the backend endpoint is available |
+| **Test Data**         | - Username: `Azlina`<br>- Password: `123456789` |
+| **Basic Flow**        | 1. Staff opens the sign-up window<br>2. Enters username and password<br>3. Clicks **Sign Up**<br>4. Credentials sent to backend<br>5. Success message displayed |
+| **Post Conditions**   | - Staff credentials are stored<br>- Staff can log in using the new credentials |
+| **Alternate Flows**   | - **Empty Fields:** Prompt to fill all fields<br>- **Server Error:** Error code displayed<br>- **Connection Failure:** Error message shown |
+| **Expected Results**  | - Staff receives confirmation of successful registration<br>- Data is stored in the backend system |
