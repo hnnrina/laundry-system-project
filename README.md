@@ -151,6 +151,21 @@ All responses from the server are parsed and displayed to the user via table mod
 | **Alternate Flows**     | - **No Booking Selected:** Prompt to select a booking<br>- **Update Failure:** Error message shown<br>- **Map Error:** Google Maps fails to open <br>- **Empty Fields:** Prompt to fill all fields<br>- **Invalid Credentials:** Error message shown<br>- **Connection Failure:** Error message shown|
 | **Expected Results**    | - Booking list is displayed<br>- Status updates are successful<br>- Address opens in Google Maps<br>- Staff receives confirmation of successful login<br>- Redirected to booking page<br>- Invalid credentials trigger error message |
 
+### Use Case: Customer Sign-Up
+
+| **Field**               | **Description** |
+|-------------------------|-----------------|
+| **Test Case ID**        | TC-004 |
+| **Use Case Name**       | Customer Sign-Up |
+| **Use Case Description**| The system allows new customers to register by providing personal details and credentials. |
+| **Actor**               | Customer |
+| **Pre Conditions**      | - Customer is not yet registered<br>- Backend sign-up endpoint is available |
+| **Test Data**           | - Name: `Alya`<br>- Email: `alya@example.com`<br>- Password: `mypassword123`<br>- Phone: `0123456789`<br>- Address: `123 Jalan ABC` |
+| **Basic Flow**          | 1. Customer opens the sign-up window<br>2. Fills in name, email, password, phone, and address<br>3. Clicks **Sign Up**<br>4. Data is sent to backend<br>5. If successful, redirected to booking page |
+| **Post Conditions**     | - Customer account is created<br>- Customer is redirected to booking interface |
+| **Alternate Flows**     | - **Empty Fields:** Prompt to fill all fields<br>- **Server Error:** Error message shown<br>- **Invalid Response:** Message indicating server issue |
+| **Expected Results**    | - Customer receives confirmation of successful registration<br>- Booking page is displayed<br>- Errors are handled gracefully |
+
 ### Use Case: Customer Login
 
 | **Field**               | **Description** |
@@ -166,5 +181,19 @@ All responses from the server are parsed and displayed to the user via table mod
 | **Alternate Flows**     | - **Empty Fields:** Prompt to fill all fields<br>- **Invalid Credentials:** Error message shown<br>- **Connection Failure:** Error message shown |
 | **Expected Results**    | - Customer receives confirmation of successful login<br>- Redirected to booking page<br>- Invalid credentials trigger error message |
 
+### Use Case: Customer Booking
+
+| **Field**               | **Description** |
+|-------------------------|-----------------|
+| **Test Case ID**        | TC-006 |
+| **Use Case Name**       | Customer Booking |
+| **Use Case Description**| The system allows customers to book laundry services by selecting service type, weight, time slot, and adding notes. |
+| **Actor**               | Customer |
+| **Pre Conditions**      | - Customer is logged in<br>- Service data is available from backend |
+| **Test Data**           | - Service: `Wash & Fold`<br>- Weight: `5.0` kg<br>- Time Slot: `10:00 AM`<br>- Notes: `Handle with care` |
+| **Basic Flow**          | 1. Customer opens booking window<br>2. Selects service<br>3. Enters laundry weight<br>4. Selects pickup time slot<br>5. Adds notes<br>6. Clicks **Confirm Booking**<br>7. Booking is sent to backend<br>8. Confirmation message is displayed |
+| **Post Conditions**     | - Booking is stored in backend<br>- Confirmation is shown to customer |
+| **Alternate Flows**     | - **Missing Fields:** Prompt to fill required fields<br>- **Invalid Weight:** Error message shown<br>- **Server Error:** Booking fails with error message |
+| **Expected Results**    | - Booking is successfully created<br>- Price is calculated and displayed<br>- Errors are handled gracefully |
 
 
