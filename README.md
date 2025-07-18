@@ -59,3 +59,26 @@ B -->|Queries| C
 B -->|Address Lookup| D
 ```
 
+## Backend Application
+### Technology Stack
+* Language: PHP
+* Framework: None
+* Database: MySQL
+* API Format: RESTful (JSON)
+
+### API Documentation
+| Endpoint               | Method                | Description                                    | Request Parameters                                                           | Success Response                                                             | Error Response                                            | Security                                      |
+| ---------------------- | --------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------- |
+| `/signup.php`          | `POST`                | Register a new user                            | `name`, `email`, `password`, `phone`, `address` (as `x-www-form-urlencoded`) | `{"status":"success","message":"User registered successfully.","user_id":1}` | `{"status":"error","message":"Missing required fields."}` | Passwords hashed using `password_hash()`    |
+| `/login.php`           | `POST`                | Login user                                     | JSON: `email`, `password`                                                    | `{"success":true,"id":1,"name":"John"}`                                      | `{"success":false,"message":"Invalid password."}`         | Passwords verified with `password_verify()` |
+| `/staff_signup.php`    | `POST`                | Register staff                                 | JSON: `username`, `password`                                                 | `{"success":true,"message":"Staff registered successfully!"}`                | `{"success":false,"message":"Missing fields."}`           | Passwords hashed                            |
+| `/staff_login.php`     | `POST`                | Staff login                                    | JSON: `username`, `password`                                                 | `{"success":true,"staff_id":1}`                                              | `{"success":false,"message":"User not found."}`           | Passwords verified                          |
+| `/confirm_booking.php` | `POST`                | Register customer manually (legacy)            | `name`, `email`, `password`, `phone`, `address` (as form data)               | `{"status":"success","message":"User registered"}`                           | `{"status":"error","message":"Missing parameters"}`       | Passwords not hashed  |
+| `/create_order.php`    | `POST`                | Create laundry order                           | JSON: `user_id`, `service_id`, `weight_kg`, `time_slot`, `notes`             | `{"success":true}`                                                           | `{"success":false,"error":"<error>"}`                     | No authentication                          |
+| `/getservice.php`      | `GET`                 | Get all services                               | –                                                                            | JSON array of services                                                       | –                                                         | Public endpoint                             |
+| `/get_price.php?id=1`  | `GET`                 | Get price for a service                        | URL param: `id`                                                              | `{"price_per_kg":3.5}`                                                       | `{"error":"No price found in database."}`                 | Public endpoint                             |
+| `/get_laundry.php`     | `GET`                 | List laundry orders with service and user info | –                                                                            | Array of orders                                                              | –                                                         | Public endpoint                             |
+| `/get_order.php`       | `GET`                 | Get orders with user address                   | –                                                                            | `{"success":true,"orders":[...]}`                                            | –                                                         | Public endpoint                             |
+| `/update_status.php`   | `PUT` (via JSON POST) | Update laundry order status                    | JSON: `id`, `status`                                                         | `{"success":true}`                                                           | `{"success":false,"message":"Missing data"}`              | No auth on who updates                      |
+
+
