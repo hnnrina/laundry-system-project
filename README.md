@@ -82,10 +82,25 @@ B -->|Address Lookup| D
 | `/update_status.php`   | `PUT` (via JSON POST) | Update laundry order status                    | JSON: `id`, `status`                                                         | `{"success":true}`                                                           | `{"success":false,"message":"Missing data"}`              | No auth on who updates                      |
 
 ## Frontend Application
+The system includes two distinct frontend applications: one for customers and another for staff. Each application has its own responsibilities and user interface, but both rely on the same backend API for data access and updates.
+
 ### Customer App 
-* Purpose: Enables students to register, log in, and make laundry bookings.
-* Technology: Java (Swing UI), JSON handling via org.json
-* API Integration: Communicates with backend using HttpURLConnection, sending and receiving JSON data.
+#### Purpose:
+This desktop application is designed for students to easily manage their laundry service needs. It allows users to sign up or log in, book laundry pickups, select services (e.g., wash & fold, dry clean), specify time slots, and monitor the status of their orders in real time. The intuitive UI helps students interact with the system without needing technical knowledge.
+#### Technology Stack:
+* Java Swing for the GUI interface
+* Java AWT for event handling and layout management
+* org.json for parsing JSON responses from the backend
+* HTTPURLConnection for sending and receiving API requests
+#### API Integration: 
+The student app interacts with backend endpoints using POST and GET HTTP methods. Key operations include:
+* User Authentication: /signup.php, /login.php
+* Booking Orders: /create_order.php
+* Fetching Available Services: /getservice.php
+* Checking Prices: /get_price.php
+* Order Tracking: /get_order.php
+
+All responses from the server are parsed and displayed to the user via table models or confirmation dialogs in the Java Swing UI.
 
 ### Staff App
 * Purpose: Allows staff to view bookings, update statuses, and view delivery addresses.
