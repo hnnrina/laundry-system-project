@@ -108,7 +108,7 @@ All responses from the server are parsed and displayed to the user via table mod
 * API Integration: Similar to student app + includes Google Maps integration for address visualization.
 
 
-# Flowchart
+## Flowchart
 ### Flowchart for Staff Sign Up
 
 
