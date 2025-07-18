@@ -148,9 +148,7 @@ All responses from the server are parsed and displayed to the user via table mod
 | **Test Data**           | - Booking ID: `101`<br>- Status: `On Delivery`<br>- Address: `123 Jalan ABC` |
 | **Basic Flow**          | 1. Staff opens the dashboard<br>2. Booking data is loaded<br>3. Staff filters bookings by status (including "On Delivery")<br>4. Selects a booking<br>5. Updates status or opens address in Google Maps |
 | **Post Conditions**     | - Booking status is updated in the backend<br>- Staff can view location in Google Maps |
-| **Alternate Flows**     | - **No Booking Selected:** Prompt to select a booking<br>- **Update Failure:** Error message shown<br>- **Map Error:** Google Maps fails to open |
-| **Expected Results**    | - Booking list is displayed<br>- Status updates are successful<br>- Address opens in Google Maps |
+| **Alternate Flows**     | - **No Booking Selected:** Prompt to select a booking<br>- **Update Failure:** Error message shown<br>- **Map Error:** Google Maps fails to open <br>- **Empty Fields:** Prompt to fill all fields<br>- **Invalid Credentials:** Error message shown<br>- **Connection Failure:** Error message shown|
+| **Expected Results**    | - Booking list is displayed<br>- Status updates are successful<br>- Address opens in Google Maps<br>- Staff receives confirmation of successful login<br>- Redirected to booking page<br>- Invalid credentials trigger error message |
 
-| **Alternate Flows**     | - **Empty Fields:** Prompt to fill all fields<br>- **Invalid Credentials:** Error message shown<br>- **Connection Failure:** Error message shown |
-| **Expected Results**    | - Staff receives confirmation of successful login<br>- Redirected to booking page<br>- Invalid credentials trigger error message |
 
