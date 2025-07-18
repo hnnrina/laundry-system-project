@@ -105,7 +105,7 @@ The customer app interacts with backend endpoints using POST and GET HTTP method
 All responses from the server are parsed and displayed to the user via table models or confirmation dialogs in the Java Swing UI.
 
 ### Staff App
-####Purpose: 
+#### Purpose: 
 This application is intended for staff responsible for managing the pickup and delivery of laundry. After logging in, staff can view and filter customer orders by status, update the status of orders (e.g., "In Progress", "Completed"), and plan their delivery routes more efficiently using Google Maps integration for address verification.
 #### Technology Stack:
 * Java Swing for GUI development
