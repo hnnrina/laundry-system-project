@@ -145,7 +145,7 @@ All responses from the server are parsed and displayed to the user via table mod
 | **Use Case Description**| The system allows staff to view, filter, update, and manage laundry bookings. |
 | **Actor**               | Staff Member |
 | **Pre Conditions**      | - Staff is logged in<br>- Ensure that the booking data is available from the backend |
-| **Test Data**           | - Booking ID: `101`<br>- Status: `On Delivery`<br>- Address: `123 Jalan ABC` |
+| **Test Data**           | - Booking ID: `101`<br>- Status: `On Delivery`<br>- Address: `NO.1, JLN BM 5/5, SEKSYEN 5, BANDAR BUKIT MAHKOTA, 43000, KAJANG, SELANGOR` |
 | **Basic Flow**          | 1. Staff opens the dashboard<br>2. Booking data is loaded<br>3. Staff filters bookings by status (including "On Delivery")<br>4. Selects a booking<br>5. Updates status or opens address in Google Maps |
 | **Post Conditions**     | - Booking status is updated in the backend<br>- Staff can view location in Google Maps |
 | **Alternate Flows**     | - **No Booking Selected:** Prompt to select a booking<br>- **Update Failure:** Error message shown<br>- **Map Error:** Google Maps fails to open <br>- **Empty Fields:** Prompt to fill all fields<br>- **Invalid Credentials:** Error message shown<br>- **Connection Failure:** Error message shown|
