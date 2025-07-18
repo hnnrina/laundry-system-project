@@ -1,4 +1,4 @@
-# BITP 3123 DISTRIBUTION APPLICATION DEVELOPMENT
+![DAD mini project-CSU](https://github.com/user-attachments/assets/aafd4893-621d-4a48-9918-f30e49154c2a)# BITP 3123 DISTRIBUTION APPLICATION DEVELOPMENT
 ## GROUP PROJECT TITLE: 
 LaundryGo: Smart Laundry Pickup and Delivery System
 ## Introduction
@@ -110,7 +110,22 @@ All responses from the server are parsed and displayed to the user via table mod
 
 ## Flowchart
 ### Flowchart for Staff Sign Up
+![DAD mini project-SSU](https://github.com/user-attachments/assets/e72806ce-9648-421c-afdd-3796e993f800)
 
+### FLowchart for Staff Login
+![DAD mini project-SL](https://github.com/user-attachments/assets/777a9557-69d4-4f76-b508-59d6e2f3f4af)
+
+### Flowchart for Staff Booking
+![DAD mini project-SB](https://github.com/user-attachments/assets/a1d6b6c9-5848-4d40-b956-f9d794b12738)
+
+### Flowchart for Customer Sign Up
+![DAD mini project-CSU](https://github.com/user-attachments/assets/e5371080-24da-4be0-9f9d-088b81732a0e)
+
+### FLowchart for Customer Login
+![DAD mini project-CL](https://github.com/user-attachments/assets/91e4c98a-57b7-4492-8e70-f4c76942ad5a)
+
+### FLowchart for Customer Booking
+![DAD mini project-CB](https://github.com/user-attachments/assets/3819d2f5-a8ec-4e72-8881-a9c4f7eb482b)
 
 ## Use Case Diagram
 ### Use Case: Staff Sign-Up
