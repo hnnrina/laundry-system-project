@@ -1,5 +1,3 @@
-package student;
-
 public class SessionManager {
     private static String jwtToken;
     private static int userId;
