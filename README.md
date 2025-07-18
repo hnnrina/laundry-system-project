@@ -122,3 +122,19 @@ All responses from the server are parsed and displayed to the user via table mod
 | **Post Conditions**   | - Staff credentials are stored<br>- Staff can log in using the new credentials |
 | **Alternate Flows**   | - **Empty Fields:** Prompt to fill all fields<br>- **Server Error:** Error code displayed<br>- **Connection Failure:** Error message shown |
 | **Expected Results**  | - Staff receives confirmation of successful registration<br>- Data is stored in the backend system |
+
+### Use Case: Staff Login
+
+| **Field**               | **Description** |
+|-------------------------|-----------------|
+| **Test Case ID**        | TC-002 |
+| **Use Case Name**       | Staff Login |
+| **Use Case Description**| The system allows staff to log in to the laundry management system using valid credentials. |
+| **Actor**               | Staff Member |
+| **Pre Conditions**      | - Staff account already exists<br>- Ensure that the backend login endpoint is available |
+| **Test Data**           | - Username: `Azlina`<br>- Password: `123456789` |
+| **Basic Flow**          | 1. Staff opens the login window<br>2. Enters username and password<br>3. Clicks **Log In**<br>4. Credentials sent to backend<br>5. If valid, login is successful and booking page opens |
+| **Post Conditions**     | - Staff is authenticated<br>- Booking page is displayed |
+| **Alternate Flows**     | - **Empty Fields:** Prompt to fill all fields<br>- **Invalid Credentials:** Error message shown<br>- **Connection Failure:** Error message shown |
+| **Expected Results**    | - Staff receives confirmation of successful login<br>- Redirected to booking page<br>- Invalid credentials trigger error message |
+
