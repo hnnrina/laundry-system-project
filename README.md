@@ -135,6 +135,66 @@ The staff app primarily uses GET and PUT methods to manage and monitor laundry o
 
 Staff can click on customer addresses to open them in Google Maps via browser redirection, helping them visualize the pickup/delivery locations.
 
+## Business Logic and Data Validation
+
+### 1.0 Staff SIgn Up
+#### 1.1 Business Logic
+* Collect staff username and password.
+* Send data to backend via HTTP POST.
+* Backend stores staff credentials and returns success or error.
+#### 1.2 Data Validation
+* Username and password must not be empty.
+
+### 2.0 Staff Login
+#### 2.1 Business Logic 
+* Accept staff username and password.
+* Send credentials to backend for verification.
+* If valid, redirect to staff booking dashboard.
+#### 2.2 Data Validation
+* Username and password must not be empty.
+
+### 3.0 Staff Booking
+#### 3.1 Business Logic
+* Load all bookings from backend.
+* Allow filtering by status.
+* Enable status and address viewing via Google Maps.
+* Send updates to backend.
+#### 3.2 Data Validation
+* Booking must be selected before update or map view.
+* New status must be different from current status.
+
+### 4.0 Customer Sign-Up 
+#### 4.1 Business Logic
+* Collect customer details (e.g., Name, Email, password, phone number and address).
+* Send data to backend via HTTP POST.
+* Backend stores customer data and returns success or error.
+#### 4.2 Data Validation
+* All fields must be filled.
+* Email must follow valid format.
+* Phone number must be numeric and valid.
+* Address must not be empty.
+
+### 5.0 Customer Login
+#### 5.1 Business Logic
+* Accept email and password.
+* Send credentials to backend for verification.
+* If valid, redirect to booking interface.
+#### 5.2 Data Validation
+* Email and password fields must not be empty.
+* Email format must be valid.
+
+### 6.0 Customer Booking
+#### 6.1 Business Logic
+* Allow customer to select service, enter laundry weight, choose time slot and add notes.
+* Calculate price based on weight and service.
+* Send booking details to backend.
+#### 6.2 Data Validation
+* Service must be selected.
+* Weight must be valid number.
+* Time slot must be selected.
+* Notes are optional but must be text.
+* Price msut be calculated before confirmation.
+
 ## Flowchart
 ### Flowchart for Staff Sign Up
 ![DAD mini project-SSU](https://github.com/user-attachments/assets/e72806ce-9648-421c-afdd-3796e993f800)
