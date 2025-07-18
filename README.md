@@ -92,3 +92,4 @@ B -->|Address Lookup| D
 * Technology: Java (Swing UI), JSON + Google Maps API
 * API Integration: Similar to student app + includes Google Maps integration for address visualization.
 
+## Use Case Diagram
