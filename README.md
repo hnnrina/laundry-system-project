@@ -108,7 +108,6 @@ All responses from the server are parsed and displayed to the user via table mod
 * API Integration: Similar to student app + includes Google Maps integration for address visualization.
 
 ## Use Case Diagram
-## Use Case Diagram
 ### Use Case: Staff Sign-Up
 
 | **Field**             | **Description** |
