@@ -46,7 +46,7 @@ This system includes two frontend applications (for students and staff), a backe
 graph TD
 
 %% Components
-A1[Student App] 
+A1[Customer App] 
 A2[Staff App]
 B[Backend Server]
 C[MySQL Database]
