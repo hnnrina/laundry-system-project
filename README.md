@@ -98,7 +98,7 @@ The customer app interacts with backend endpoints using POST and GET HTTP method
 * Booking Orders: /create_order.php
 * Fetching Available Services: /getservice.php
 * Checking Prices: /get_price.php
-* Order Tracking: /get_order.php
+* Order Tracking: /get_booking_status.php
 
 All responses from the server are parsed and displayed to the user via table models or confirmation dialogs in the Java Swing UI.
 
