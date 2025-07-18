@@ -37,3 +37,30 @@ The system integrates with Google Maps API in the staff application to assist in
 * It enhances delivery efficiency by providing accurate geographic data
 * It supports better service planning and staff allocation
 * It reduces errors related to incorrect or ambiguous address entries
+
+## System Architecture Overview
+
+This system is composed of two separate frontend applications (for students and staff), a centralized backend server, a shared MySQL database, and a third-party integration with the Google Maps API for address verification.
+
+```mermaid
+graph TD
+
+%% Frontend Applications
+A1[Student Frontend App<br>(Java Swing)] 
+A2[Staff Frontend App<br>(Java Swing)]
+
+%% Backend
+B[Backend Server<br>(PHP + REST API)]
+
+%% Database
+C[(MySQL Database)]
+
+%% External API
+D[Google Maps API<br>(3rd-Party)]
+
+%% Data Flow
+A1 -->|HTTP Requests| B
+A2 -->|HTTP Requests| B
+B -->|Read/Write Data| C
+B -->|Address Lookup| D
+```
