@@ -103,10 +103,22 @@ The customer app interacts with backend endpoints using POST and GET HTTP method
 All responses from the server are parsed and displayed to the user via table models or confirmation dialogs in the Java Swing UI.
 
 ### Staff App
-* Purpose: Allows staff to view bookings, update statuses, and view delivery addresses.
-* Technology: Java (Swing UI), JSON + Google Maps API
-* API Integration: Similar to student app + includes Google Maps integration for address visualization.
+####Purpose: 
+This application is intended for staff responsible for managing the pickup and delivery of laundry. After logging in, staff can view and filter customer orders by status, update the status of orders (e.g., "In Progress", "Completed"), and plan their delivery routes more efficiently using Google Maps integration for address verification.
+#### Technology Stack:
+* Java Swing for GUI development
+* Java AWT for handling UI components and layouts
+* org.json for JSON data handling
+* HTTPURLConnection for communicating with backend endpoints
+* Google Maps Web Integration (via clickable address links or browser redirection)
+#### API Integration 
+The staff app primarily uses GET and PUT methods to manage and monitor laundry orders. Core API usage includes:
+* Authentication: /staff_login.php
+* Order Management: /get_order.php, /get_laundry.php, /update_status.php
+* Service & Pricing: /getservice.php, /get_price.php
+* Address Lookup: Uses parsed address data from orders and integrates it with Google Maps for delivery route checking.
 
+Staff can click on customer addresses to open them in Google Maps via browser redirection, helping them visualize the pickup/delivery locations.
 
 ## Flowchart
 ### Flowchart for Staff Sign Up
