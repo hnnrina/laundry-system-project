@@ -82,6 +82,19 @@ B -->|Address Lookup| D
 | `/get_booking_status.php` | `GET`                 | Get current booking status                     | – (JWT used to identify user)                                                | `{"success":true,"status":"In progress"}`                                    | `{"success":false,"message":"Invalid or expired token"}`  | Requires JWT                          |
 | `/update_status.php`      | `PUT` (via JSON POST) | Update laundry order status                    | JSON: `id`, `status`, `staff_id`                                             | `{"success":true}`                                                           | `{"success":false,"message":"Missing data"}`              | No JWT yet            |
 
+## Database Design
+### Entity-Relationship Diagram (ERD)
+
+### Schema Justification
+| Table Name       | Purpose                                                                      |
+| ---------------- | ---------------------------------------------------------------------------- |
+| `users`          | Stores users' personal and login info.                               |
+| `staff`          | Stores staff login credentials.                                              |
+| `services`       | Lists available laundry services.                                            |
+| `laundry_orders` | Tracks all orders placed by customers.                                        |
+| `status_change`  | Logs each update to an order’s status and links it to the responsible staff. |
+
+
 
 ## Frontend Application
 The system includes two distinct frontend applications: one for customers and another for staff. Each application has its own responsibilities and user interface, but both rely on the same backend API for data access and updates.
