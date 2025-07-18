@@ -81,4 +81,14 @@ B -->|Address Lookup| D
 | `/get_order.php`       | `GET`                 | Get orders with user address                   | –                                                                            | `{"success":true,"orders":[...]}`                                            | –                                                         | Public endpoint                             |
 | `/update_status.php`   | `PUT` (via JSON POST) | Update laundry order status                    | JSON: `id`, `status`                                                         | `{"success":true}`                                                           | `{"success":false,"message":"Missing data"}`              | No auth on who updates                      |
 
+## Frontend Application
+### Customer App 
+* Purpose: Enables students to register, log in, and make laundry bookings.
+* Technology: Java (Swing UI), JSON handling via org.json
+* API Integration: Communicates with backend using HttpURLConnection, sending and receiving JSON data.
+
+### Staff App
+* Purpose: Allows staff to view bookings, update statuses, and view delivery addresses.
+* Technology: Java (Swing UI), JSON + Google Maps API
+* API Integration: Similar to student app + includes Google Maps integration for address visualization.
 
