@@ -40,28 +40,22 @@ The system integrates with Google Maps API in the staff application to assist in
 
 ## System Architecture Overview
 
-This system is composed of two separate frontend applications (for students and staff), a centralized backend server, a shared MySQL database, and a third-party integration with the Google Maps API for address verification.
+This system includes two frontend applications (for students and staff), a backend server, a shared database, and an external integration with the Google Maps API.
 
 ```mermaid
 graph TD
 
-%% Frontend Applications
-A1[Student Frontend App (Java Swing)] 
-A2[Staff Frontend App (Java Swing)]
-
-%% Backend
-B[Backend Server (PHP + REST API)]
-
-%% Database
-C[(MySQL Database)]
-
-%% External API
+%% Components
+A1[Student App] 
+A2[Staff App]
+B[Backend Server]
+C[MySQL Database]
 D[Google Maps API]
 
 %% Data Flow
-A1 -->|HTTP Request| B
-A2 -->|HTTP Request| B
-B -->|Read/Write| C
+A1 -->|Requests| B
+A2 -->|Requests| B
+B -->|Queries| C
 B -->|Address Lookup| D
 ```
 
