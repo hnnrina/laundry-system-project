@@ -151,4 +151,20 @@ All responses from the server are parsed and displayed to the user via table mod
 | **Alternate Flows**     | - **No Booking Selected:** Prompt to select a booking<br>- **Update Failure:** Error message shown<br>- **Map Error:** Google Maps fails to open <br>- **Empty Fields:** Prompt to fill all fields<br>- **Invalid Credentials:** Error message shown<br>- **Connection Failure:** Error message shown|
 | **Expected Results**    | - Booking list is displayed<br>- Status updates are successful<br>- Address opens in Google Maps<br>- Staff receives confirmation of successful login<br>- Redirected to booking page<br>- Invalid credentials trigger error message |
 
+### Use Case: Customer Login
+
+| **Field**               | **Description** |
+|-------------------------|-----------------|
+| **Test Case ID**        | TC-005 |
+| **Use Case Name**       | Customer Login |
+| **Use Case Description**| The system allows customers to log in to the laundry management system using their email and password. |
+| **Actor**               | Customer |
+| **Pre Conditions**      | - Customer account exists<br>- Backend login endpoint is available |
+| **Test Data**           | - Email: `customer@example.com`<br>- Password: `securePass123` |
+| **Basic Flow**          | 1. Customer opens the login window<br>2. Enters email and password<br>3. Clicks **Log In**<br>4. Credentials are sent to the backend<br>5. If valid, login is successful and booking page opens |
+| **Post Conditions**     | - Customer is authenticated<br>- Booking interface is displayed |
+| **Alternate Flows**     | - **Empty Fields:** Prompt to fill all fields<br>- **Invalid Credentials:** Error message shown<br>- **Connection Failure:** Error message shown |
+| **Expected Results**    | - Customer receives confirmation of successful login<br>- Redirected to booking page<br>- Invalid credentials trigger error message |
+
+
 
