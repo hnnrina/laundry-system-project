@@ -2,9 +2,9 @@
 ## GROUP PROJECT TITLE: 
 LaundryGo: Smart Laundry Pickup and Delivery System
 ## Introduction
-In today's fast-paced environment, managing daily chores like laundry can be especially tedious especially for working professionals. Traditional laundry services typically require in-person visits or at the very list we need to contact them through calls which we can made only during office hours time, which are often inconvenient and time-consuming. To simplify this, we purpose LaundryGo, a smart Laundry Pickup and Delivery System that enables users to schedule laundry services online at anywhere anytime and receive clean clothes at their doorstep-all through a digital platform.
+In today’s fast-paced environment, managing daily chores like laundry can be especially tedious, particularly for working professionals. Traditional laundry services typically require in-person visits or, at the very least, contacting them via phone—often during office hours—which can be inconvenient and time-consuming. To simplify this, we propose LaundryGo, a smart Laundry Pickup and Delivery System that allows users to schedule laundry services online anytime, anywhere, and receive clean clothes right at their doorstep—all through a digital platform.
 
-The system streamlines laundry management by offering a centralized solution that connects customers and service staff, improving operational efficiency an denhancing overall customer experience.
+The system streamlines laundry management by offering a centralized solution that connects customers and service staff, improving operational efficiency and enhancing the overall customer experience.
 
 ## Project Overview
 LaundryGo is a cross-functional digital system designed to modenize laundry services through automation and remote accessibility. it consists of two Java-based desktop applications, one for customers and one for staff. Both applications connected to a PHP backend server with a MySQL database.
