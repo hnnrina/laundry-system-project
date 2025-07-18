@@ -2,9 +2,9 @@
 ## GROUP PROJECT TITLE: 
 LaundryGo: Smart Laundry Pickup and Delivery System
 ### Group Members
-* Alya Sofea Binti Abdul Ghafar
-* Azlina Binti Mat Bahri
-* Nur Hanin Afrina Binti Mohammed Salleh
+* Alya Sofea Binti Abdul Ghafar (B032310668)
+* Azlina Binti Mat Bahri (B032310724)
+* Nur Hanin Afrina Binti Mohammed Salleh (B032310703)
 
 ## Introduction
 In today’s fast-paced environment, managing daily chores like laundry can be especially tedious, particularly for working professionals. Traditional laundry services typically require in-person visits or, at the very least, contacting them via phone often during office hours, which can be inconvenient and time-consuming. To simplify this, we propose LaundryGo, a smart Laundry Pickup and Delivery System that allows users to schedule laundry services online anytime, anywhere, and receive clean clothes right at their doorstep—all through a digital platform.
