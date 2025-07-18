@@ -82,22 +82,6 @@ B -->|Address Lookup| D
 | `/get_booking_status.php` | `GET`                 | Get current booking status                     | – (JWT used to identify user)                                                | `{"success":true,"status":"In progress"}`                                    | `{"success":false,"message":"Invalid or expired token"}`  | Requires JWT                          |
 | `/update_status.php`      | `PUT` (via JSON POST) | Update laundry order status                    | JSON: `id`, `status`, `staff_id`                                             | `{"success":true}`                                                           | `{"success":false,"message":"Missing data"}`              | No JWT yet            |
 
-## Database Design
-### Entity-Relationship Diagram (ERD)
-![ERD](https://github.com/user-attachments/assets/e6bf2177-8d0f-48d0-b024-cf9b81c64134)
-
-
-### Schema Justification
-| Table Name       | Purpose                                                                      |
-| ---------------- | ---------------------------------------------------------------------------- |
-| `users`          | Stores users' personal and login info.                               |
-| `staff`          | Stores staff login credentials.                                              |
-| `services`       | Lists available laundry services.                                            |
-| `laundry_orders` | Tracks all orders placed by customers.                                        |
-| `status_change`  | Logs each update to an order’s status and links it to the responsible staff. |
-
-
-
 ## Frontend Application
 The system includes two distinct frontend applications: one for customers and another for staff. Each application has its own responsibilities and user interface, but both rely on the same backend API for data access and updates.
 
@@ -136,6 +120,29 @@ The staff app primarily uses GET and PUT methods to manage and monitor laundry o
 * Address Lookup: Uses parsed address data from orders and integrates it with Google Maps for delivery route checking.
 
 Staff can click on customer addresses to open them in Google Maps via browser redirection, helping them visualize the pickup/delivery locations.
+
+## Database Design
+### Entity-Relationship Diagram (ERD)
+![ERD](https://github.com/user-attachments/assets/e6bf2177-8d0f-48d0-b024-cf9b81c64134)
+
+
+### Schema Justification
+The database schema is designed to support multiple user roles (customers and staff), allow flexible service offerings, and track orders and status updates in a normalized, secure, and scalable way.
+
+#### Tables
+| Table Name       | Purpose                                                                      |
+| ---------------- | ---------------------------------------------------------------------------- |
+| `users`          | Stores users' personal and login info.                               |
+| `staff`          | Stores staff login credentials.                                              |
+| `services`       | Lists available laundry services.                                            |
+| `laundry_orders` | Tracks all orders placed by customers.                                        |
+| `status_change`  | Logs each update to an order’s status and links it to the responsible staff. |
+
+#### Justification
+* Normalization avoids duplication (e.g. services is separated).
+* Tracking responsibility through status_change supports accountability.
+* Extensible: New features (e.g. delivery scheduling) can be added without major redesign.
+* Security: Passwords are hashed and JWT is used to protect endpoints.
 
 ## Business Logic and Data Validation
 
