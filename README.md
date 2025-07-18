@@ -84,6 +84,8 @@ B -->|Address Lookup| D
 
 ## Database Design
 ### Entity-Relationship Diagram (ERD)
+![ERD](https://github.com/user-attachments/assets/e6bf2177-8d0f-48d0-b024-cf9b81c64134)
+
 
 ### Schema Justification
 | Table Name       | Purpose                                                                      |
