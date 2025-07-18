@@ -1,4 +1,4 @@
-![DAD mini project-CSU](https://github.com/user-attachments/assets/aafd4893-621d-4a48-9918-f30e49154c2a)# BITP 3123 DISTRIBUTION APPLICATION DEVELOPMENT
+# BITP 3123 DISTRIBUTION APPLICATION DEVELOPMENT
 ## GROUP PROJECT TITLE: 
 LaundryGo: Smart Laundry Pickup and Delivery System
 ## Introduction
